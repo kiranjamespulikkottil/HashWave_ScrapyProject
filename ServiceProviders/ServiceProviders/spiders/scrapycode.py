@@ -24,7 +24,7 @@ class GlobaltradeSpider(scrapy.Spider):
                 'primary_location' : response.css('.profile-details td span::text')[1].get(),
                 'area_of_expertise' : response.css('.mainExp ::text').get(),
                 'about' : response.css('.section table p::text').getall(),
-                'website' : response.css('.section table tr a::text').get(),
-                'language_spoken' : response.css('.section table tr ::text').get(),
+                'website' : response.css('.section table tr a::text').re(r'http.*'),
+                'language_spoken' : response.css('.section table tr ::text')[47].get(),
                 'page_url' : response.url,
             }
