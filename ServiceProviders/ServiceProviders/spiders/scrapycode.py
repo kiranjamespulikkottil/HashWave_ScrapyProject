@@ -35,4 +35,4 @@ class GlobaltradeSpider(scrapy.Spider):
                 'page_url' : response.url,
             }
 
-#Command for Execute the Spider and Create dataset.json file : "scrapy crawl globaltrade -o dataset.json"
+#Command for Execute the Spider and Create dataset.json file  :  "scrapy crawl globaltrade -o dataset.json"
