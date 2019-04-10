@@ -8,11 +8,5 @@ Scrapy 1.6.0
 2) Install Scrapy.
         "pip install Scrapy"
 
-3) Create a Scrapy Project.
-        "scrapy startproject ServiceProviders"
-
-4) Create code for a spider that scraps data from websites.
-        "scrapycode.py" ----> Spidername: 'globaltrade'
-
-5)Command for Run the code and Create a dataset.json.
+3)Command for Execute the Spider and Create a 'dataset.json' file.
         "scrapy crawl globaltrade -o dataset.json"
