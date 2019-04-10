@@ -6,7 +6,7 @@ Scrapy 1.6.0
         "pipenv shell"
 
 2) Install Scrapy.
-        "pip install Scrapy"
+        "pip install scrapy"
 
 3)Command for Execute the Spider and Create a 'dataset.json' file.
         "scrapy crawl globaltrade -o dataset.json"
