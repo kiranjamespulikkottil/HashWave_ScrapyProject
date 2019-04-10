@@ -9,4 +9,4 @@ Scrapy 1.6.0
         "pip install scrapy"
 
 3)Command for Execute the Spider and Create a 'dataset.json' file.
-        "scrapy crawl globaltrade -o dataset.json     
+        "scrapy crawl globaltrade -o dataset.json"     
