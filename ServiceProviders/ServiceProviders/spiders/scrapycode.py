@@ -15,6 +15,9 @@ class GlobaltradeSpider(scrapy.Spider):
         for href in response.css('.sp-image a::attr(href)'):
             yield response.follow(href, self.parse_response)
 
+        for href in response.css('.nav-page a::attr(href)'):
+            yield response.follow(href, self.parse)
+
 
     def parse_response(self, response):
         yield {
@@ -25,6 +28,6 @@ class GlobaltradeSpider(scrapy.Spider):
                 'area_of_expertise' : response.css('.mainExp ::text').get(),
                 'about' : response.css('.section table p::text').getall(),
                 'website' : response.css('.section table tr a::text').re(r'http.*'),
-                'language_spoken' : response.css('.section table tr ::text')[47].get(),
+                'language_spoken' : response.css('.section table tr ::text')[20:55].re(r'\n.{4,8}\n'),
                 'page_url' : response.url,
             }
